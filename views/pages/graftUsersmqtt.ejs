@@ -1,0 +1,38 @@
+<%- include("../templates/encabezado") %>
+<%- include("../templates/menu") %>
+
+<canvas id="graficaUsers" width="400" height="300"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    let nombresUsuarios = [];
+    let puntosUsuarios = [];
+    <% usuarios.forEach((usuario) => { %>
+        nombresUsuarios.push('<%= usuario.nombre %>');
+        puntosUsuarios.push('<%= usuario.points %>');
+    <% }); %>;
+
+    let miCanvas = document.getElementById("graficaUsers").getContext("2d");
+    var chart = new Chart(miCanvas, {
+        type: "bar",
+        data: {
+            labels: nombresUsuarios,
+            datasets: [{
+                label: "Usuarios de Live Recycling",
+                data: puntosUsuarios,
+                backgroundColor:"#2ECC71" ,
+                borderColor: "#229954",
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+
+<%- include("../templates/pie") %>

@@ -1,0 +1,22 @@
+<%- include("../templates/encabezado")%>
+<%- include("../templates/menu")%>
+<div class="container mt-4">
+    <form action="/actUser" method="post">
+        <div class="card" style="background-color: rgb(6, 201, 28); border-radius: 40px;">
+            <div class="card-header">
+                <h1>Modifica al Usuario <%=user.nombre%></h1>
+            </div>
+            <div class="card-body">
+                <input class="form-control mb-3" type="hidden" name="id" id="id" value="<%=user.id%>">
+                <input class="form-control mb-3" type="text" name="nombre" id="nombre" value="<%=user.nombre%>" autofocus>
+                <input class="form-control mb-3" type="text" name="usuario" id="usuario" value="<%=user.usuario%>">
+                <input class="form-control mb-3" type="text" name="password" id="password" value="<%=user.password%>">
+                <input class="form-control mb-3" type="number" name="points" id="points" value="<%=user.points%>">
+            </div>
+            <div class="card-footer">
+                <button class="form-control btn" style="background-color: green; color: white;" type="submit">Guardar usuario</button>
+            </div>
+        </div>
+    </form>
+</div>
+<%- include("../templates/pie")%>

@@ -1,0 +1,122 @@
+<%- include("../templates/encabezado")%>
+    <%- include("../templates/menu")%>
+        <style>
+         body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: justify; /* Justificar el texto */
+    }
+
+    .header {
+        padding: 60px;
+        text-align: center;
+        background: #1abc4d;
+        color: white;
+    }
+
+    .header h1 {
+        font-size: 40px;
+    }
+
+    .header img {
+        width: 25%;
+        margin: auto; /* Centrar imagen */
+        display: block;
+    }
+
+    .content {
+        padding: 20px;
+    }
+    .content p {
+        width: 50%;
+        margin: auto; /* Centrar párrafos */
+        margin-bottom: 15px;
+    }
+    .content h3 {
+        width: 50%;
+        margin: auto; /* Centrar párrafos */
+        margin-bottom: 15px;
+    }
+
+    .cuerpo1 h1{
+        width: 50%;
+        text-align: center; /* Centrar párrafos */
+        margin-bottom: 15px;
+    }
+
+    .cuerpo1 img, .cuerpo2 img {
+        width: 30%;
+        margin: 10px auto; /* Centrar imágenes y agregar margen */
+        display: block;
+        border: 3px solid green; /* Margen verde */
+        border-radius: 15px; /* Bordes redondeados */
+        transition: transform 0.3s ease; /* Transición suave para el efecto de agrandar */
+    }
+
+    .cuerpo1 img:hover, .cuerpo2 img:hover {
+        transform: scale(1.1); /* Agrandar imagen al pasar el puntero */
+    }
+
+    .footer {
+        background-color: #333;
+        padding: 10px;
+        text-align: center;
+        color: white;
+    }
+        </style>
+        <div class="header">
+            <img class="logo" src="../img/imageLogo.png" alt="#">
+            <h1>¡Le damos la bienvenida!</h1>
+        </div>
+    
+        <div class="content">
+            <h2>Nuestra Historia</h2>
+            <p>Somos un pequeño equipo formado por alumnos de la Universidad tecnológica de sanjuán de rio que
+                cursa la carrera de “Ingeniería en desarrollo y gestión de software con salida lateral T.S.U
+                Tecnologías de la información, área desarrollo de software multiplataforma.” Nuestra historia
+                empezó a inicios de cuarto cuatrimestre, en donde la idea de desarrollar proyectos se intensifico
+                debido al objetivo de las asignaturas.</p>
+    
+            <p>A la fecha de hoy, aunque todavía nos cuesta acostumbrarnos a la forma de trabajar de distintas
+                metodologías que estuvimos adoptando, damos todo para cumplir nuestro objetivo como pequeña
+                empresa. </p>
+        </div>
+    
+        <div class="cuerpo1">
+          <h1>Prototipo de Solidworks: </h1>
+          <img src="../img/compartimentos.jpeg" alt="" style="width: 30%;">
+          <img src="../img/tapa.jpeg" alt="" style="width: 30%;">
+          <h1>Prototipo Fisico: </h1>
+          <img src="../img/compartimentosf.jpeg" alt="" style="width: 30%;">
+          <img src="../img/tapaf.jpeg" alt="" style="width: 30%;">
+        </div>
+    
+        <div class="cuerpo2 content">
+          <h3>Mision</h3>
+          <p>En nuestra empresa, nos comprometemos a liderar la vanguardia de la innovación tecnológica y 
+            sostenibilidad ambiental, fusionando la excelencia en tecnología con un fuerte compromiso con la 
+            preservación del medio ambiente. Nuestra misión es impulsar un cambio positivo al ofrecer 
+            soluciones tecnológicas avanzadas mientras abordamos activamente los desafíos asociados con la 
+            gestión de residuos que puedan dañar el medio ambiente.</p>
+    
+          <h3>Vision</h3>
+          <p>Nos visualizamos como grandes aportadores en el ámbito de la tecnología y el reciclaje, siendo 
+            reconocidos por nuestra contribución excepcional a la creación de un mundo más sostenible y 
+            conectado. En el horizonte de nuestra visión, nos imaginamos como una fuerza motriz para el 
+            cambio, transformando la manera en que la sociedad concibe y gestiona la tecnología, al mismo 
+            tiempo que impulsa prácticas empresariales responsables y respetuosas con el medio ambiente.</p>
+          
+          <h3>Organizacion</h3>
+          <img src="../img/organizador.jpeg" alt="organizador.jpg">
+    
+          <h3>Ubicacion</h3>
+          <p>Nos situamos en Av La Palma No 125 Vista Hermosa, 76800 San Juan del Río, Qro. <br>
+            Actualmente no tenemos oficinas ya que trabajamos dentro de la universidad y ahí es donde se desarrolla 
+            nuestro proyecto.</p>
+        </div>
+    
+        <div class="footer">
+            <p>LiveRecycling©2024</p>
+        </div>
+        <%- include("../templates/pie")%>

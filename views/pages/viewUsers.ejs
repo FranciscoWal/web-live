@@ -1,0 +1,44 @@
+<%- include("../templates/encabezado")%>
+<%- include("../templates/menu")%>
+<div class="container mt-5">
+    <div class="card" style="background-color:  rgb(6, 201, 28);; border-radius: 40px;">
+        <div class="card-header">
+            <h2>Usuarios Live Recycling</h2>
+        </div>
+        <div class="card-body">
+            <table  class="table table-dark table-hover" >
+                <thead >
+                    <tr >
+                        <th>id</th>
+                        <th>Nombre</th>
+                        <th>Usuario</th>
+                        <th>Password</th>
+                        <th>Puntos</th>
+                        <th>Editar/Borrar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%
+                    usuarios.forEach((usuario,i)=>{
+                    %>
+                    <tr>
+                        <td><%= i+1 %></td>
+                        <td><%= usuario.nombre %></td>
+                        <td><%= usuario.usuario %></td>
+                        <td>*****</td>
+                        <td><%= usuario.points %></td>
+                        <td>
+                            <a href="/editar/<%= usuario.id %>">Editar</a>
+                            <a href="/borrar/<%= usuario.id %>">Borrar</a>
+                        </td>
+                    </tr>
+                    <%
+                    });
+                    %>
+                </tbody>
+            </table>
+        </div>
+        <div class="card-footer"></div>
+    </div>
+</div>
+<%- include("../templates/pie")%>
